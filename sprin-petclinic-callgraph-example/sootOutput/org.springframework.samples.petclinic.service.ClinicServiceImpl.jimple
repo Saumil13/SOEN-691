@@ -1,0 +1,149 @@
+public class org.springframework.samples.petclinic.service.ClinicServiceImpl extends java.lang.Object implements org.springframework.samples.petclinic.service.ClinicService
+{
+    private org.springframework.samples.petclinic.repository.PetRepository petRepository;
+    private org.springframework.samples.petclinic.repository.VetRepository vetRepository;
+    private org.springframework.samples.petclinic.repository.OwnerRepository ownerRepository;
+    private org.springframework.samples.petclinic.repository.VisitRepository visitRepository;
+
+    public void <init>(org.springframework.samples.petclinic.repository.PetRepository, org.springframework.samples.petclinic.repository.VetRepository, org.springframework.samples.petclinic.repository.OwnerRepository, org.springframework.samples.petclinic.repository.VisitRepository)
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        org.springframework.samples.petclinic.repository.PetRepository r1;
+        org.springframework.samples.petclinic.repository.VetRepository r2;
+        org.springframework.samples.petclinic.repository.OwnerRepository r3;
+        org.springframework.samples.petclinic.repository.VisitRepository r4;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        r1 := @parameter0: org.springframework.samples.petclinic.repository.PetRepository;
+        r2 := @parameter1: org.springframework.samples.petclinic.repository.VetRepository;
+        r3 := @parameter2: org.springframework.samples.petclinic.repository.OwnerRepository;
+        r4 := @parameter3: org.springframework.samples.petclinic.repository.VisitRepository;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.PetRepository petRepository> = r1;
+        r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.VetRepository vetRepository> = r2;
+        r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.OwnerRepository ownerRepository> = r3;
+        r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.VisitRepository visitRepository> = r4;
+        return;
+    }
+
+    public java.util.Collection findPetTypes() throws org.springframework.dao.DataAccessException
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        org.springframework.samples.petclinic.repository.PetRepository $r1;
+        java.util.List $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        $r1 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.PetRepository petRepository>;
+        $r2 = interfaceinvoke $r1.<org.springframework.samples.petclinic.repository.PetRepository: java.util.List findPetTypes()>();
+        return $r2;
+    }
+
+    public org.springframework.samples.petclinic.model.Owner findOwnerById(int) throws org.springframework.dao.DataAccessException
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        int i0;
+        org.springframework.samples.petclinic.repository.OwnerRepository $r1;
+        org.springframework.samples.petclinic.model.Owner $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        i0 := @parameter0: int;
+        $r1 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.OwnerRepository ownerRepository>;
+        $r2 = interfaceinvoke $r1.<org.springframework.samples.petclinic.repository.OwnerRepository: org.springframework.samples.petclinic.model.Owner findById(int)>(i0);
+        return $r2;
+    }
+
+    public java.util.Collection findOwnerByLastName(java.lang.String) throws org.springframework.dao.DataAccessException
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        java.lang.String r1;
+        org.springframework.samples.petclinic.repository.OwnerRepository $r2;
+        java.util.Collection $r3;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        r1 := @parameter0: java.lang.String;
+        $r2 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.OwnerRepository ownerRepository>;
+        $r3 = interfaceinvoke $r2.<org.springframework.samples.petclinic.repository.OwnerRepository: java.util.Collection findByLastName(java.lang.String)>(r1);
+        return $r3;
+    }
+
+    public void saveOwner(org.springframework.samples.petclinic.model.Owner) throws org.springframework.dao.DataAccessException
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        org.springframework.samples.petclinic.model.Owner r1;
+        org.springframework.samples.petclinic.repository.OwnerRepository $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        r1 := @parameter0: org.springframework.samples.petclinic.model.Owner;
+        $r2 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.OwnerRepository ownerRepository>;
+        interfaceinvoke $r2.<org.springframework.samples.petclinic.repository.OwnerRepository: void save(org.springframework.samples.petclinic.model.Owner)>(r1);
+        return;
+    }
+
+    public void saveVisit(org.springframework.samples.petclinic.model.Visit) throws org.springframework.dao.DataAccessException
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        org.springframework.samples.petclinic.model.Visit r1;
+        org.springframework.samples.petclinic.repository.VisitRepository $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        r1 := @parameter0: org.springframework.samples.petclinic.model.Visit;
+        $r2 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.VisitRepository visitRepository>;
+        interfaceinvoke $r2.<org.springframework.samples.petclinic.repository.VisitRepository: void save(org.springframework.samples.petclinic.model.Visit)>(r1);
+        return;
+    }
+
+    public org.springframework.samples.petclinic.model.Pet findPetById(int) throws org.springframework.dao.DataAccessException
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        int i0;
+        org.springframework.samples.petclinic.repository.PetRepository $r1;
+        org.springframework.samples.petclinic.model.Pet $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        i0 := @parameter0: int;
+        $r1 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.PetRepository petRepository>;
+        $r2 = interfaceinvoke $r1.<org.springframework.samples.petclinic.repository.PetRepository: org.springframework.samples.petclinic.model.Pet findById(int)>(i0);
+        return $r2;
+    }
+
+    public void savePet(org.springframework.samples.petclinic.model.Pet) throws org.springframework.dao.DataAccessException
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        org.springframework.samples.petclinic.model.Pet r1;
+        org.springframework.samples.petclinic.repository.PetRepository $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        r1 := @parameter0: org.springframework.samples.petclinic.model.Pet;
+        $r2 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.PetRepository petRepository>;
+        interfaceinvoke $r2.<org.springframework.samples.petclinic.repository.PetRepository: void save(org.springframework.samples.petclinic.model.Pet)>(r1);
+        return;
+    }
+
+    public java.util.Collection findVets() throws org.springframework.dao.DataAccessException
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        org.springframework.samples.petclinic.repository.VetRepository $r1;
+        java.util.Collection $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        $r1 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.VetRepository vetRepository>;
+        $r2 = interfaceinvoke $r1.<org.springframework.samples.petclinic.repository.VetRepository: java.util.Collection findAll()>();
+        return $r2;
+    }
+
+    public java.util.Collection findVisitsByPetId(int)
+    {
+        org.springframework.samples.petclinic.service.ClinicServiceImpl r0;
+        int i0;
+        org.springframework.samples.petclinic.repository.VisitRepository $r1;
+        java.lang.Integer $r2;
+        java.util.List $r3;
+
+        r0 := @this: org.springframework.samples.petclinic.service.ClinicServiceImpl;
+        i0 := @parameter0: int;
+        $r1 = r0.<org.springframework.samples.petclinic.service.ClinicServiceImpl: org.springframework.samples.petclinic.repository.VisitRepository visitRepository>;
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i0);
+        $r3 = interfaceinvoke $r1.<org.springframework.samples.petclinic.repository.VisitRepository: java.util.List findByPetId(java.lang.Integer)>($r2);
+        return $r3;
+    }
+}

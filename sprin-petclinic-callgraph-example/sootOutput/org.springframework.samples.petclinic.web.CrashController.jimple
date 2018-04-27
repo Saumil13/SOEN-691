@@ -1,0 +1,23 @@
+public class org.springframework.samples.petclinic.web.CrashController extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        org.springframework.samples.petclinic.web.CrashController r0;
+
+        r0 := @this: org.springframework.samples.petclinic.web.CrashController;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    public java.lang.String triggerException()
+    {
+        org.springframework.samples.petclinic.web.CrashController r0;
+        java.lang.RuntimeException $r1;
+
+        r0 := @this: org.springframework.samples.petclinic.web.CrashController;
+        $r1 = new java.lang.RuntimeException;
+        specialinvoke $r1.<java.lang.RuntimeException: void <init>(java.lang.String)>("Expected: controller used to showcase what happens when an exception is thrown");
+        throw $r1;
+    }
+}

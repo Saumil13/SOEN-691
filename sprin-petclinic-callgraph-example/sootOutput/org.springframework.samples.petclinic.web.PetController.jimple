@@ -1,0 +1,177 @@
+public class org.springframework.samples.petclinic.web.PetController extends java.lang.Object
+{
+    private static final java.lang.String VIEWS_PETS_CREATE_OR_UPDATE_FORM;
+    private final org.springframework.samples.petclinic.service.ClinicService clinicService;
+
+    public void <init>(org.springframework.samples.petclinic.service.ClinicService)
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        org.springframework.samples.petclinic.service.ClinicService r1;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        r1 := @parameter0: org.springframework.samples.petclinic.service.ClinicService;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        r0.<org.springframework.samples.petclinic.web.PetController: org.springframework.samples.petclinic.service.ClinicService clinicService> = r1;
+        return;
+    }
+
+    public java.util.Collection populatePetTypes()
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        org.springframework.samples.petclinic.service.ClinicService $r1;
+        java.util.Collection $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        $r1 = r0.<org.springframework.samples.petclinic.web.PetController: org.springframework.samples.petclinic.service.ClinicService clinicService>;
+        $r2 = interfaceinvoke $r1.<org.springframework.samples.petclinic.service.ClinicService: java.util.Collection findPetTypes()>();
+        return $r2;
+    }
+
+    public org.springframework.samples.petclinic.model.Owner findOwner(int)
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        int i0;
+        org.springframework.samples.petclinic.service.ClinicService $r1;
+        org.springframework.samples.petclinic.model.Owner $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        i0 := @parameter0: int;
+        $r1 = r0.<org.springframework.samples.petclinic.web.PetController: org.springframework.samples.petclinic.service.ClinicService clinicService>;
+        $r2 = interfaceinvoke $r1.<org.springframework.samples.petclinic.service.ClinicService: org.springframework.samples.petclinic.model.Owner findOwnerById(int)>(i0);
+        return $r2;
+    }
+
+    public void initOwnerBinder(org.springframework.web.bind.WebDataBinder)
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        org.springframework.web.bind.WebDataBinder r1;
+        java.lang.String[] $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        r1 := @parameter0: org.springframework.web.bind.WebDataBinder;
+        $r2 = newarray (java.lang.String)[1];
+        $r2[0] = "id";
+        virtualinvoke r1.<org.springframework.web.bind.WebDataBinder: void setDisallowedFields(java.lang.String[])>($r2);
+        return;
+    }
+
+    public void initPetBinder(org.springframework.web.bind.WebDataBinder)
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        org.springframework.web.bind.WebDataBinder r1;
+        org.springframework.samples.petclinic.web.PetValidator $r2;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        r1 := @parameter0: org.springframework.web.bind.WebDataBinder;
+        $r2 = new org.springframework.samples.petclinic.web.PetValidator;
+        specialinvoke $r2.<org.springframework.samples.petclinic.web.PetValidator: void <init>()>();
+        virtualinvoke r1.<org.springframework.web.bind.WebDataBinder: void setValidator(org.springframework.validation.Validator)>($r2);
+        return;
+    }
+
+    public java.lang.String initCreationForm(org.springframework.samples.petclinic.model.Owner, org.springframework.ui.ModelMap)
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        org.springframework.samples.petclinic.model.Owner r1;
+        org.springframework.ui.ModelMap r2;
+        org.springframework.samples.petclinic.model.Pet $r3, r4;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        r1 := @parameter0: org.springframework.samples.petclinic.model.Owner;
+        r2 := @parameter1: org.springframework.ui.ModelMap;
+        $r3 = new org.springframework.samples.petclinic.model.Pet;
+        specialinvoke $r3.<org.springframework.samples.petclinic.model.Pet: void <init>()>();
+        r4 = $r3;
+        virtualinvoke r1.<org.springframework.samples.petclinic.model.Owner: void addPet(org.springframework.samples.petclinic.model.Pet)>(r4);
+        virtualinvoke r2.<org.springframework.ui.ModelMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("pet", r4);
+        return "pets/createOrUpdatePetForm";
+    }
+
+    public java.lang.String processCreationForm(org.springframework.samples.petclinic.model.Owner, org.springframework.samples.petclinic.model.Pet, org.springframework.validation.BindingResult, org.springframework.ui.ModelMap)
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        org.springframework.samples.petclinic.model.Owner r1;
+        org.springframework.samples.petclinic.model.Pet r2, $r7;
+        org.springframework.validation.BindingResult r3;
+        org.springframework.ui.ModelMap r4;
+        java.lang.String $r5, $r6;
+        boolean $z0, $z1, $z2;
+        org.springframework.samples.petclinic.service.ClinicService $r9;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        r1 := @parameter0: org.springframework.samples.petclinic.model.Owner;
+        r2 := @parameter1: org.springframework.samples.petclinic.model.Pet;
+        r3 := @parameter2: org.springframework.validation.BindingResult;
+        r4 := @parameter3: org.springframework.ui.ModelMap;
+        $r5 = virtualinvoke r2.<org.springframework.samples.petclinic.model.Pet: java.lang.String getName()>();
+        $z0 = staticinvoke <org.springframework.util.StringUtils: boolean hasLength(java.lang.String)>($r5);
+        if $z0 == 0 goto label0;
+
+        $z1 = virtualinvoke r2.<org.springframework.samples.petclinic.model.Pet: boolean isNew()>();
+        if $z1 == 0 goto label0;
+
+        $r6 = virtualinvoke r2.<org.springframework.samples.petclinic.model.Pet: java.lang.String getName()>();
+        $r7 = virtualinvoke r1.<org.springframework.samples.petclinic.model.Owner: org.springframework.samples.petclinic.model.Pet getPet(java.lang.String,boolean)>($r6, 1);
+        if $r7 == null goto label0;
+
+        interfaceinvoke r3.<org.springframework.validation.BindingResult: void rejectValue(java.lang.String,java.lang.String,java.lang.String)>("name", "duplicate", "already exists");
+
+     label0:
+        $z2 = interfaceinvoke r3.<org.springframework.validation.BindingResult: boolean hasErrors()>();
+        if $z2 == 0 goto label1;
+
+        virtualinvoke r4.<org.springframework.ui.ModelMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("pet", r2);
+        return "pets/createOrUpdatePetForm";
+
+     label1:
+        virtualinvoke r1.<org.springframework.samples.petclinic.model.Owner: void addPet(org.springframework.samples.petclinic.model.Pet)>(r2);
+        $r9 = r0.<org.springframework.samples.petclinic.web.PetController: org.springframework.samples.petclinic.service.ClinicService clinicService>;
+        interfaceinvoke $r9.<org.springframework.samples.petclinic.service.ClinicService: void savePet(org.springframework.samples.petclinic.model.Pet)>(r2);
+        return "redirect:/owners/{ownerId}";
+    }
+
+    public java.lang.String initUpdateForm(int, org.springframework.ui.ModelMap)
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        int i0;
+        org.springframework.ui.ModelMap r1;
+        org.springframework.samples.petclinic.model.Pet r2;
+        org.springframework.samples.petclinic.service.ClinicService $r3;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        i0 := @parameter0: int;
+        r1 := @parameter1: org.springframework.ui.ModelMap;
+        $r3 = r0.<org.springframework.samples.petclinic.web.PetController: org.springframework.samples.petclinic.service.ClinicService clinicService>;
+        r2 = interfaceinvoke $r3.<org.springframework.samples.petclinic.service.ClinicService: org.springframework.samples.petclinic.model.Pet findPetById(int)>(i0);
+        virtualinvoke r1.<org.springframework.ui.ModelMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("pet", r2);
+        return "pets/createOrUpdatePetForm";
+    }
+
+    public java.lang.String processUpdateForm(org.springframework.samples.petclinic.model.Pet, org.springframework.validation.BindingResult, org.springframework.samples.petclinic.model.Owner, org.springframework.ui.ModelMap)
+    {
+        org.springframework.samples.petclinic.web.PetController r0;
+        org.springframework.samples.petclinic.model.Pet r1;
+        org.springframework.validation.BindingResult r2;
+        org.springframework.samples.petclinic.model.Owner r3;
+        org.springframework.ui.ModelMap r4;
+        boolean $z0;
+        org.springframework.samples.petclinic.service.ClinicService $r6;
+
+        r0 := @this: org.springframework.samples.petclinic.web.PetController;
+        r1 := @parameter0: org.springframework.samples.petclinic.model.Pet;
+        r2 := @parameter1: org.springframework.validation.BindingResult;
+        r3 := @parameter2: org.springframework.samples.petclinic.model.Owner;
+        r4 := @parameter3: org.springframework.ui.ModelMap;
+        $z0 = interfaceinvoke r2.<org.springframework.validation.BindingResult: boolean hasErrors()>();
+        if $z0 == 0 goto label0;
+
+        virtualinvoke r4.<org.springframework.ui.ModelMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("pet", r1);
+        return "pets/createOrUpdatePetForm";
+
+     label0:
+        virtualinvoke r3.<org.springframework.samples.petclinic.model.Owner: void addPet(org.springframework.samples.petclinic.model.Pet)>(r1);
+        $r6 = r0.<org.springframework.samples.petclinic.web.PetController: org.springframework.samples.petclinic.service.ClinicService clinicService>;
+        interfaceinvoke $r6.<org.springframework.samples.petclinic.service.ClinicService: void savePet(org.springframework.samples.petclinic.model.Pet)>(r1);
+        return "redirect:/owners/{ownerId}";
+    }
+}

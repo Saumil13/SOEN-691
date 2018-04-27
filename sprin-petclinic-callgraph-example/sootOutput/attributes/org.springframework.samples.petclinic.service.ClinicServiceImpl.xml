@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<attributes>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="8" eline="8" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/beans/factory/annotation/Autowired; num elems: 0 elems: 
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="29" eline="29" spos="0" epos="0"/>
+<text info="Signature: ()Ljava/util/Collection<Lorg/springframework/samples/petclinic/model/PetType;>;" aType="SignatureTag"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/transaction/annotation/Transactional; num elems: 1 elems: 
+Annotation Element: kind: Z name: readOnly value: 1
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="41" eline="41" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/transaction/annotation/Transactional; num elems: 1 elems: 
+Annotation Element: kind: Z name: readOnly value: 1
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="55" eline="55" spos="0" epos="0"/>
+<text info="Signature: (Ljava/lang/String;)Ljava/util/Collection<Lorg/springframework/samples/petclinic/model/Owner;>;" aType="SignatureTag"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/transaction/annotation/Transactional; num elems: 1 elems: 
+Annotation Element: kind: Z name: readOnly value: 1
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="69" eline="69" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/transaction/annotation/Transactional; num elems: 0 elems: 
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="82" eline="82" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/transaction/annotation/Transactional; num elems: 0 elems: 
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="95" eline="95" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/transaction/annotation/Transactional; num elems: 1 elems: 
+Annotation Element: kind: Z name: readOnly value: 1
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="109" eline="109" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/transaction/annotation/Transactional; num elems: 0 elems: 
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="122" eline="122" spos="0" epos="0"/>
+<text info="Signature: ()Ljava/util/Collection<Lorg/springframework/samples/petclinic/model/Vet;>;" aType="SignatureTag"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/transaction/annotation/Transactional; num elems: 1 elems: 
+Annotation Element: kind: Z name: readOnly value: 1
+
+Annotation: type: Lorg/springframework/cache/annotation/Cacheable; num elems: 1 elems: 
+Annotation Element: kind: [ name: value values: [Annotation Element: kind: s name: value value: vets]
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="134" eline="134" spos="0" epos="0"/>
+<text info="Signature: (I)Ljava/util/Collection<Lorg/springframework/samples/petclinic/model/Visit;>;" aType="SignatureTag"/>
+</attribute>
+</attributes>

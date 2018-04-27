@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<attributes>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="0" eline="0" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/beans/factory/annotation/Autowired; num elems: 0 elems: 
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="0" eline="0" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/web/bind/annotation/InitBinder; num elems: 0 elems: 
+
+" aType="VisibilityAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="0" eline="0" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/web/bind/annotation/ModelAttribute; num elems: 1 elems: 
+Annotation Element: kind: s name: value value: visit
+
+" aType="VisibilityAnnotationTag"/>
+<text info="Visibility Param Annotation: num params: 1 kind: 0
+Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/web/bind/annotation/PathVariable; num elems: 1 elems: 
+Annotation Element: kind: s name: value value: petId
+
+
+" aType="VisibilityParameterAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="0" eline="0" spos="0" epos="0"/>
+<text info="Signature: (ILjava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)Ljava/lang/String;" aType="SignatureTag"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/web/bind/annotation/RequestMapping; num elems: 2 elems: 
+Annotation Element: kind: [ name: value values: [Annotation Element: kind: s name: value value: /owners/*/pets/{petId}/visits/new]
+Annotation Element: kind: [ name: method values: [Annotation Element: kind: e name: method type name: Lorg/springframework/web/bind/annotation/RequestMethod; constant name: GET]
+
+" aType="VisibilityAnnotationTag"/>
+<text info="Visibility Param Annotation: num params: 2 kind: 0
+Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/web/bind/annotation/PathVariable; num elems: 1 elems: 
+Annotation Element: kind: s name: value value: petId
+
+
+Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+
+" aType="VisibilityParameterAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="0" eline="0" spos="0" epos="0"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/web/bind/annotation/RequestMapping; num elems: 2 elems: 
+Annotation Element: kind: [ name: value values: [Annotation Element: kind: s name: value value: /owners/{ownerId}/pets/{petId}/visits/new]
+Annotation Element: kind: [ name: method values: [Annotation Element: kind: e name: method type name: Lorg/springframework/web/bind/annotation/RequestMethod; constant name: POST]
+
+" aType="VisibilityAnnotationTag"/>
+<text info="Visibility Param Annotation: num params: 2 kind: 0
+Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Ljavax/validation/Valid; num elems: 0 elems: 
+
+
+Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+
+" aType="VisibilityParameterAnnotationTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="0" eline="0" spos="0" epos="0"/>
+<text info="Signature: (ILjava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)Ljava/lang/String;" aType="SignatureTag"/>
+<text info="Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/web/bind/annotation/RequestMapping; num elems: 2 elems: 
+Annotation Element: kind: [ name: value values: [Annotation Element: kind: s name: value value: /owners/*/pets/{petId}/visits]
+Annotation Element: kind: [ name: method values: [Annotation Element: kind: e name: method type name: Lorg/springframework/web/bind/annotation/RequestMethod; constant name: GET]
+
+" aType="VisibilityAnnotationTag"/>
+<text info="Visibility Param Annotation: num params: 2 kind: 0
+Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+Annotation: type: Lorg/springframework/web/bind/annotation/PathVariable; num elems: 0 elems: 
+
+
+Visibility Annotation: level: RUNTIME (runtime-visible)
+ Annotations:
+
+" aType="VisibilityParameterAnnotationTag"/>
+</attribute>
+</attributes>

@@ -1,0 +1,7 @@
+public interface  org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository extends java.lang.Object implements org.springframework.samples.petclinic.repository.OwnerRepository, org.springframework.data.repository.Repository
+{
+
+    public abstract java.util.Collection findByLastName(java.lang.String);
+
+    public abstract org.springframework.samples.petclinic.model.Owner findById(int);
+}

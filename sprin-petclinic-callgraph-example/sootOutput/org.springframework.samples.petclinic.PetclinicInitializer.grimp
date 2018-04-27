@@ -1,0 +1,68 @@
+public class org.springframework.samples.petclinic.PetclinicInitializer extends org.springframework.web.servlet.support.AbstractDispatcherServletInitializer
+{
+    private static final java.lang.String SPRING_PROFILE;
+
+    public void <init>()
+    {
+        org.springframework.samples.petclinic.PetclinicInitializer r0;
+
+        r0 := @this;
+        r0.<init>();
+        return;
+    }
+
+    protected org.springframework.web.context.WebApplicationContext createRootApplicationContext()
+    {
+        org.springframework.samples.petclinic.PetclinicInitializer r0;
+        org.springframework.web.context.support.XmlWebApplicationContext r2;
+        java.lang.String[] $r3, $r5;
+        org.springframework.core.env.ConfigurableEnvironment $r4;
+
+        r0 := @this;
+        r2 = new org.springframework.web.context.support.XmlWebApplicationContext();
+        $r3 = newarray (java.lang.String)[2];
+        $r3[0] = "classpath:spring/business-config.xml";
+        $r3[1] = "classpath:spring/tools-config.xml";
+        r2.setConfigLocations($r3);
+        $r4 = r2.getEnvironment();
+        $r5 = newarray (java.lang.String)[1];
+        $r5[0] = "jpa";
+        $r4.setDefaultProfiles($r5);
+        return r2;
+    }
+
+    protected org.springframework.web.context.WebApplicationContext createServletApplicationContext()
+    {
+        org.springframework.samples.petclinic.PetclinicInitializer r0;
+        org.springframework.web.context.support.XmlWebApplicationContext r2;
+
+        r0 := @this;
+        r2 = new org.springframework.web.context.support.XmlWebApplicationContext();
+        r2.setConfigLocation("classpath:spring/mvc-core-config.xml");
+        return r2;
+    }
+
+    protected java.lang.String[] getServletMappings()
+    {
+        org.springframework.samples.petclinic.PetclinicInitializer r0;
+        java.lang.String[] $r1;
+
+        r0 := @this;
+        $r1 = newarray (java.lang.String)[1];
+        $r1[0] = "/";
+        return $r1;
+    }
+
+    protected javax.servlet.Filter[] getServletFilters()
+    {
+        org.springframework.samples.petclinic.PetclinicInitializer r0;
+        org.springframework.web.filter.CharacterEncodingFilter r2;
+        javax.servlet.Filter[] $r3;
+
+        r0 := @this;
+        r2 = new org.springframework.web.filter.CharacterEncodingFilter("UTF-8", 1);
+        $r3 = newarray (javax.servlet.Filter)[1];
+        $r3[0] = r2;
+        return $r3;
+    }
+}
